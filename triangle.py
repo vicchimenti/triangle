@@ -1,6 +1,3 @@
-import sys
-
-
 def input_test(a, b, c):
     if a or b or c <= 0:
         return 0
@@ -52,9 +49,9 @@ if input_test(a, b, c) == 1:
             print("You have an Isosceles Triangle")
         elif scalene(a, b, c) == 1:
             print("You have a Scalene Triangle")
+        else:
+            print("This is a right triangle")
     else:
         print("You did not submit a valid triangle")
 else:
     print("Invalid input. Please rerun the program and enter valid positive numbers.")
-
-
