@@ -30,8 +30,31 @@ def isosceles(a, b, c):
         return 1
     elif c == b and c != a:
         return 1
-    return 0;
+    return 0
 
 
 def scalene(a, b, c):
+    if a != b and a != c and c != b:
+        return 1
+    return 0
+
+
+print("Enter the dimensions of the triangle: ")
+a = input("Side 1: ")
+b = input("Side 2: ")
+c = input("Side 3: ")
+
+if input_test(a, b, c) == 1:
+    if valid_triangle(a, b, c) == 1:
+        if equilateral(a, b, c) == 1:
+            print("You have an equilateral triangle")
+        elif isosceles(a, b, c) == 1:
+            print("You have an Isosceles Triangle")
+        elif scalene(a, b, c) == 1:
+            print("You have a Scalene Triangle")
+    else:
+        print("You did not submit a valid triangle")
+else:
+    print("Invalid input. Please rerun the program and enter valid positive numbers.")
+
 
